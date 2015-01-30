@@ -2868,7 +2868,7 @@
             Loads the core values tp the API request, including auth and basic settings.
             </summary>
         </member>
-        <member name="M:AuthorizeNet.GatewayRequest.AddCustomer(System.String,System.String,System.String,System.String,System.String,System.String)">
+        <member name="M:AuthorizeNet.GatewayRequest.AddCustomer(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
             <summary>
             Adds a Customer record to the current request
             </summary>
@@ -2921,7 +2921,7 @@
             The 3-digit Credit Card Code (CCV) on the back of the card
             </summary>
         </member>
-        <member name="M:AuthorizeNet.GatewayRequest.AddShipping(System.String,System.String,System.String,System.String,System.String,System.String)">
+        <member name="M:AuthorizeNet.GatewayRequest.AddShipping(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
             <summary>
             Adds a Shipping Record to the current request
             </summary>
@@ -3320,6 +3320,14 @@
             Initializes a new instance of the <see cref="T:AuthorizeNet.CardPresentCredit"/> class.
             </summary>
             <param name="transactionID">The transaction ID.</param>
+        </member>
+        <member name="M:AuthorizeNet.Util.HtmlHelper.RelayResponseRedirecter(System.String)">
+            <summary>
+            This will issue a full HTML document with a built-in script, which will redirect the browser away from 
+            Authorize.NET to the URL you pass in. Be sure the toURL is absolute.  This can be used in your DPM Replay Response Endpoint
+            </summary>
+            <param name="toUrl"></param>
+            <returns></returns>
         </member>
         <member name="T:AuthorizeNet.Util.StringUtils">
             <summary>

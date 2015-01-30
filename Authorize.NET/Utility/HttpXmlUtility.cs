@@ -12,7 +12,8 @@ namespace AuthorizeNet {
     /// </summary>
     public class HttpXmlUtility {
 
-        string _serviceUrl = AuthorizeNet.Environment.SANDBOX.getXmlBaseUrl() + "/xml/v1/request.api";
+        //string _serviceUrl = AuthorizeNet.Environment.SANDBOX.getXmlBaseUrl() + "/xml/v1/request.api";
+        string _serviceUrl = AuthorizeNet.Environment.PLUM.getXmlBaseUrl() + "/xml/v1/request.api";
         string _apiLogin = "";
         string _transactionKey = "";
 

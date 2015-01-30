@@ -57,7 +57,8 @@ namespace AuthorizeNet {
     /// </summary>
     public class CardPresentGateway:Gateway, ICardPresentGateway {
         
-        string _serviceUrl = Environment.SANDBOX.getCardPresentUrl();
+        //string _serviceUrl = Environment.SANDBOX.getCardPresentUrl();
+        string _serviceUrl = Environment.PLUM.getCardPresentUrl();
 
         DeviceType _deviceType = DeviceType.PersonalComputerBasedTerminal;
         string _marketType = "2";

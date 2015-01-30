@@ -2,6 +2,7 @@
 using NUnit.Framework;
 using System;
 using System.Configuration;
+using System.Globalization;
 
 namespace AuthorizeNETtest
 {
@@ -27,7 +28,7 @@ namespace AuthorizeNETtest
             LocalRequestObject.ResponseString = responseString;
             IGatewayResponse expected = new CardPresentResponse(responseString.Split('|'));
 
-            CardPresentGateway target = new CardPresentGateway(ApiLogin, TransactionKey, true);
+            CardPresentGateway target = new CardPresentGateway(ApiLogin, TransactionKey, false);
 
             IGatewayRequest request = new CardPresentAuthorizationRequest(amount, "4111111111111111", "02", "16");
             string description = "CP Auth transaction approved testing";
@@ -183,6 +184,36 @@ namespace AuthorizeNETtest
             {
                 return "";
             }
+        }
+
+        /// <summary>
+        /// Regression test for customer issue where set transaction amount from string fails if number format on local machine does not match US format
+        /// </summary>
+        [Test]
+        public void regressStringToAmountWithCulture()
+        {
+            decimal testAmount = 5555.99M;
+            string cardNumber = "4111111111111111";
+            int expirationMonth = 1;
+            int expirationYear = DateTime.Now.Year + 1;
+
+
+            Assert.AreNotEqual(testAmount.ToString(), testAmount.ToString(CultureInfo.InvariantCulture),
+                "This test is not valid unless number format does not match US number format.");
+
+            //Create transaction request.
+            string sError = CheckLoginPassword();
+            Assert.IsTrue(sError == "", sError);
+            var gateway = new CardPresentGateway(ApiLogin, TransactionKey, false);
+
+            var request = new CardPresentAuthorizationRequest(testAmount, cardNumber, expirationMonth.ToString(), expirationYear.ToString());
+            //request.Amount = testAmount.ToString(CultureInfo.InvariantCulture);
+
+            IGatewayResponse response = gateway.Send(request);
+
+            //TBD  Add validation once the request is working
+
+
         }
     }
 }

@@ -2,4 +2,3 @@ C:\dthurmanGitBranch\sdk-dotnet\Authorize.NET\bin\Debug\AuthorizeNet.dll
 C:\dthurmanGitBranch\sdk-dotnet\Authorize.NET\bin\Debug\AuthorizeNet.pdb
 C:\dthurmanGitBranch\sdk-dotnet\Authorize.NET\obj\Debug\AuthorizeNet.dll
 C:\dthurmanGitBranch\sdk-dotnet\Authorize.NET\obj\Debug\AuthorizeNet.pdb
-C:\dthurmanGitBranch\sdk-dotnet\Authorize.NET\bin\Debug\AuthorizeNet.XML

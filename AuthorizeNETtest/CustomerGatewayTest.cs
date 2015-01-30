@@ -9,6 +9,7 @@ using System;
 using System.Configuration;
 using System.IO;
 using System.Xml.Serialization;
+using System.Globalization;
 
 namespace AuthorizeNETtest
 {

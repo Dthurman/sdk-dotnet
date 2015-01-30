@@ -22,8 +22,8 @@ namespace AuthorizeNet.Api.Controllers.Test
 	
 	    protected static readonly IDictionary<String, String> ErrorMessages ;
 	
-	    //protected static AuthorizeNet.Environment TestEnvironment = AuthorizeNet.Environment.SANDBOX;
-        protected static AuthorizeNet.Environment TestEnvironment = AuthorizeNet.Environment.PLUM;
+	    protected static AuthorizeNet.Environment TestEnvironment = AuthorizeNet.Environment.SANDBOX;
+        //protected static AuthorizeNet.Environment TestEnvironment = AuthorizeNet.Environment.PLUM;
 
 	    static Merchant _merchant ;
 	    static readonly String ApiLoginIdKey ;

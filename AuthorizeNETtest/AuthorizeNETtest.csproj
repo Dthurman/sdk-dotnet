@@ -74,6 +74,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="*.cs" />
+    <Compile Include="Api\Controllers\SampleTest\eCheckTransactionSampleTest.cs" />
     <Compile Include="Api\Controllers\Test\*.cs" />
     <Compile Include="Api\Controllers\MockTest\*.cs" />
     <Compile Include="Api\Controllers\SampleTest\ArbSubscriptionSampleTest.cs" />
